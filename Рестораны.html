@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рестики</title>
+  
+  <link rel="website icon" type="png"
+    href="C:\Users\Станислав\OneDrive - УО “Алматы Менеджмент Университет”\Рабочий стол\rest1\photo\logo.png">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+
+<body>
+
+	<header>
+    
+
+
+            <ul>
+            </ul>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" class="active lang" key="басты бет">Главная</a>
+                    </li>
+                    <li>
+                        <a href="новости.html" class="active lang" key="жаңалықтар">Новости</a>
+                    </li>
+                    <li>
+                        <a href="Рестораны.html" class="active lang" key="мейрамханалар">Рестораны</a>
+                    </li>
+                    <li>
+                        <a href="онас.html" class="active lang" key="біз туралы">О нас</a>
+                    </li>
+                    <li>
+                        <a href="Вход.html" class="active lang" key="басты бет">вход/рег</a>
+                    </li>
+                    <li>
+                        <a href="Вход.html" class="active lang" key="басты бет">Личнный каб</a>
+                    </li>
+                </ul>
+            </nav>
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
+        <div class="app">
+	<script src="app.js"></script>
+
+	<select id="categoryFilter">
+		<option value="all">Все категории</option>
+		<option value="итальянская кухня">Итальянская кухня</option>
+		<option value="морепродукты">Морепродукты</option>
+		<option value="мясной">Мясной</option>
+		<option value="казахская кухня">Казахская кухня</option>
+		<option value="грузинская кухня">Грузинская кухня</option>
+	</select>
+</div>
+
+	<div class="container">
+
+		<h1 class="heading">Рестораны</h1>
+	
+		<div class="box-container" id="restaurantContainer">
+	
+			<div class="box" data-categories="морепродукты">
+				<img src="https://i2.photo.2gis.com/images/branch/0/30258560067508220_969e_328x170.jpg" alt="">
+				<h3>Ocean basket</h3>
+				<a href="https://2gis.kz/almaty/firm/70000001031632899" class="btn">2gis</a>
+				<a href="https://www.instagram.com/oceanbasket.kz/" class="btn">inst</a>
+
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="Мясной">
+				<img src="https://avatars.mds.yandex.net/get-altay/5548986/2a00000183476b4ff15d91d3363bcbcf1004/L_height" alt="">
+				<h3>Огонёк</h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/firm/70000001056260786/76.94485%2C43.252949" class="btn">2gis</a>
+				<a href="https://www.instagram.com/ogonek.almaty/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="казахская кухня">
+				<img src="https://media-cdn.tripadvisor.com/media/photo-s/26/c0/7f/a1/caption.jpg" alt="">
+				<h3>Rifugio del Monte </h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/filters/rating_rating_perfect/firm/70000001064217225/77.080015%2C43.126569?m=77.080015%2C43.126569%2F16" class="btn">2gis</a>
+				<a href="https://www.instagram.com/rifugio_del_monte/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="грузинская кухня">
+				<img src="https://avatars.mds.yandex.net/get-altay/5596516/2a0000017f949ecb61c4cc6f4fe7602b12ca/L_height" alt="">
+				<h3>Praha</h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/firm/70000001044212656/76.963098%2C43.222957?m=76.963098%2C43.222957%2F16" class="btn">2gis</a>
+				<a href="https://www.instagram.com/praha.almaty/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="мясной">
+				<img src="https://i4.photo.2gis.com/images/branch/0/30258560098699024_0f91_328x170.jpg" alt="">
+				<h3>Magic Ville </h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/firm/70000001066687924/76.951275%2C43.232715?m=76.951275%2C43.232715%2F16" class="btn">2gis</a>
+				<a href="https://www.instagram.com/magicville_kz/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="грузинская кухня">
+				<img src="https://strg1.restoran.kz/neofiles/serve-image/5bd17ce2d06291793ae78321/1280x720/q70" alt="">
+				<h3>ТАНУКИ</h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/firm/70000001078526241/76.934305%2C43.245334?m=76.934305%2C43.245334%2F16" class="btn">2gis</a>
+				<a href="https://www.instagram.com/tanuki_kz/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="казахская кухня">
+				<img src="https://avatars.mds.yandex.net/get-altay/7636462/2a0000018756a1329929668bacc95ea0d4a7/L_height" alt="">
+				<h3>Sagamo </h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/firm/70000001061018883/76.924122%2C43.25539?m=76.924122%2C43.25539%2F16" class="btn">2gis</a>
+				<a href="https://www.instagram.com/sagamo_restaurant_karaoke/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="итальянская кухня">
+				<img src="https://restolife.kz/upload/information_system_6/2/5/5/item_25566/information_items_property_32751.jpg" alt="">
+				<h3>Ezo</h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/firm/70000001064085002/76.947891%2C43.253184?m=76.947891%2C43.253184%2F16" class="btn">2gis</a>
+				<a href="https://www.instagram.com/ezo.almaty/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+            <div class="box" data-categories="морепродукты">
+				<img src="https://i.ytimg.com/vi/G5ZVZsYKgRs/maxresdefault.jpg" alt="">
+				<h3>TomYumBar </h3>
+				<a href="https://2gis.kz/almaty/search/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B/rubricId/164/firm/70000001058785497/76.933414%2C43.251769?m=76.933414%2C43.251769%2F16" class="btn">2gis</a>
+				<a href="https://www.instagram.com/tomyumbar.almaty/" class="btn">inst</a>
+                <button onclick="addToFavorites()">
+                    <a class="btn">изб</a>
+			</div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/1.jpg" alt="">
+        <h3>Дадиани</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/2.jpg" alt="">
+        <h3>Чачапури</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/3.jpg" alt="">
+        <h3>Restaurant Belvedere</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/4.webp" alt="">
+        <h3>Barmaglo</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="photo/5.jpg" alt="">
+        <h3>Kishlak</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/6.jpg" alt="">
+        <h3>Zheti Kazyna</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/7.jpg" alt="">
+        <h3>Ziyafet Steak House </h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="морепродукты">
+        <img src="photo/8.jpg" alt="">
+        <h3>Basilic</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="photo/9.jpg" alt="">
+        <h3>Manga Japanese Restaurant</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="photo/11.jpg" alt="">
+        <h3>Magic Masala</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/12.jpg" alt="">
+        <h3>Zaytun Cafe</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="photo/13.jpg" alt="">
+        <h3>Kunjut Cafe</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/14.jpg" alt="">
+        <h3>Paulaner Bräuhaus Almaty</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="photo/15.jpg" alt="">
+        <h3>Hazbin</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="photo/16.jpg" alt="">
+        <h3>Tanama</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/17.jpg" alt="">
+        <h3>Апрель</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="морепродукты">
+        <img src="photo/18.jpg" alt="">
+        <h3>ЗАГС</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/19.jpg" alt="">
+        <h3>Асель</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="photo/20.jpg" alt="">
+        <h3>J.Z. Peking Duck</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/21.jpg" alt="">
+        <h3>Interna Food</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="photo/22.jpg" alt="">
+        <h3>Uncle Caffe</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/23.jpg" alt="">
+        <h3>Пещера кафе</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/24.jpg" alt="">
+        <h3>Körşi</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="photo/25.jpg" alt="">
+        <h3>Kish-Mish</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="морепродукты">
+        <img src="photo/26.jpg" alt="">
+        <h3>Хмельница Паб</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="photo/27.jpg" alt="">
+        <h3>Минари Кафе</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/28.jpg" alt="">
+        <h3>Таверна на углях </h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="photo/29.jpg" alt="">
+        <h3>Грузинский двор</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="морепродукты">
+        <img src="photo/30.webp" alt="">
+        <h3>Бочонок</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/31.webp" alt="">
+        <h3>Vivaldi</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="photo/31.webp" alt="">
+        <h3>Малина Mix</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/32.webp" alt="">
+        <h3>Алтын Адам</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/33.webp" alt="">
+        <h3>Островок</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="морепродукты">
+        <img src="photo/34.jpg" alt="">
+        <h3>Алазани</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/35.jpg" alt="">
+        <h3>Буханка Гриль-Бар</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="тальянская кухня">
+        <img src="photo/36.jpg" alt="">
+        <h3>Лаффа</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="photo/37.jpg" alt="">
+        <h3>Full House</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/38.jpeg" alt="">
+        <h3>Avenue Лаундж-бар</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="грузинская кухня">
+        <img src="photo/39.jpg" alt="">
+        <h3>Пинта</h3>
+        <a href="" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="морепродукты">
+        <img src="https://strg1.restoran.kz/neofiles/serve-image/63e4bb44b241d80e400c2d6e/1280x720/q70" alt="">
+        <h3>Mood Bar & Terrace & Karaoke</h3>
+        <a href="https://instagram.com/mood.bar.kz" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="">
+        <img src="https://strg2.restoran.kz/neofiles/serve-image/63e20661102be20ea389b27c/720x405/q40" alt="">
+        <h3>Hogo Qazan</h3>
+        <a href="https://instagram.com/hogoboss.kz" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="https://strg1.restoran.kz/neofiles/serve-image/640ac1500c94c0259f45f9db/720x405/q40" alt="">
+        <h3>Саксаул</h3>
+        <a href="https://instagram.com/saksaul_almaty_restaurant" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="https://strg2.restoran.kz/neofiles/serve-image/655f1647b316cb1985f0fbcf/720x405/q40" alt="">
+        <h3>Pavilion</h3>
+        <a href="https://instagram.com/bestwesternplusalmaty" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="мясной">
+        <img src="https://strg1.restoran.kz/neofiles/serve-image/65cc92745dda0a519a15e48d/720x405/q40" alt="">
+        <h3>Vinci restobar</h3>
+        <a href="https://instagram.com/vinci_restobar" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="казахская кухня">
+        <img src="https://strg2.restoran.kz/neofiles/serve-image/5c0a3853d0629147f0d0b5b4/720x405/q40" alt="">
+        <h3>Белый Слон</h3>
+        <a href="https://instagram.com/beliyslon_thaifood" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+    </div>
+    <div class="box" data-categories="тальянская кухня">
+        <img src="https://strg2.restoran.kz/neofiles/serve-image/5ccc1a8dd062917ffa443d0e/720x405/c1/q40" alt="">
+        <h3>Пугасов</h3>
+        <a href="https://instagram.com/pugasov_almaty" class="btn">inst</a>
+        <button onclick="addToFavorites()">
+            <a class="btn">изб</a>
+        
+    </div>
+    <style>
+        .heart-icon {
+            width: 30px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function addToFavorites() {
+            var restaurantName = "Ресторан XYZ"; // Название ресторана, можно заменить на что-то другое
+            var restaurantURL = window.location.href; // URL текущей страницы
+
+            // Проверяем, поддерживается ли localStorage в текущем браузере
+            if (typeof(Storage) !== "undefined") {
+                // Получаем текущий список избранных ресторанов (если есть)
+                var favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+                // Проверяем, есть ли уже такой ресторан в избранном
+                var isAlreadyAdded = favorites.some(function(item) {
+                    return item.name === restaurantName && item.url === restaurantURL;
+                });
+
+                // Если ресторана еще нет в избранном, добавляем его
+                if (!isAlreadyAdded) {
+                    favorites.push({name: restaurantName, url: restaurantURL});
+                    localStorage.setItem("favorites", JSON.stringify(favorites));
+                    alert("Ресторан добавлен в избранное!");
+                } else {
+                    alert("Ресторан уже есть в избранном!");
+                }
+            } else {
+                alert("Извините, ваш браузер не поддерживает сохранение в избранном.");
+            }
+        }
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchForm = document.getElementById('searchForm');
+        const restaurantContainer = document.getElementById('restaurantContainer');
+
+        searchForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+            const searchItem = document.getElementById('searchItem').value.toLowerCase();
+            const boxes = restaurantContainer.getElementsByClassName('box');
+            Array.from(boxes).forEach(function (box) {
+                const title = box.getElementsByTagName('h3')[0].innerText.toLowerCase();
+                if (title.includes(searchItem)) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        });
+    });
+
+	document.addEventListener("DOMContentLoaded", function () {
+    const categoryFilter = document.getElementById('categoryFilter');
+    const boxes = document.querySelectorAll('.box');
+
+    categoryFilter.addEventListener('change', function () {
+        const selectedCategory = this.value;
+
+        boxes.forEach(function (box) {
+            const categories = box.getAttribute('data-categories').split(', ');
+
+            if (selectedCategory === 'all' || categories.includes(selectedCategory)) {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    });
+
+    const searchForm = document.getElementById('searchForm');
+    searchForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form submission
+        const searchItem = document.getElementById('searchItem').value.toLowerCase();
+
+        boxes.forEach(function (box) {
+            const title = box.getElementsByTagName('h3')[0].innerText.toLowerCase();
+            if (title.includes(searchItem)) {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    });
+});
+let cart={
+    'sisls23': 2,
+    'sisls25': 2,
+}
+		
+	
+</script>
+</body>
+</html>
